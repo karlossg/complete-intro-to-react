@@ -6,12 +6,13 @@ import preload from '../data.json';
 
 class Search extends Component {
   state = {
-    searchTerm: ''
+    searchTerm: 5
   };
   handleSearchTermChange = (event: SyntheticKeyboardEvent & { target: HTMLInputElement }) => {
     this.setState({ searchTerm: event.target.value });
   };
   render() {
+    this.state.searchTerm.toUpperCase();
     return (
       <div className="search">
         <header>

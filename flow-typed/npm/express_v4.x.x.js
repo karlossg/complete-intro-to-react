@@ -85,7 +85,7 @@ declare class express$Response extends http$ServerResponse mixins express$Reques
   sendStatus(statusCode: number): this;
   header(field: string, value?: string): this;
   header(headers: {[name: string]: string}): this;
-  set(field: string, value?: string|string[]): this;
+  set(field: string, value?: string | string[]): this;
   set(headers: {[name: string]: string}): this;
   status(statusCode: number): this;
   type(type: string): this;
@@ -99,7 +99,7 @@ declare type express$Middleware =
 declare interface express$RouteMethodType<T> {
   (middleware: express$Middleware): T;
   (...middleware: Array<express$Middleware>): T;
-  (path: string|RegExp|string[], ...middleware: Array<express$Middleware>): T;
+  (path: string | RegExp | string[], ...middleware: Array<express$Middleware>): T;
 }
 declare class express$Route {
   all: express$RouteMethodType<this>;
@@ -139,7 +139,7 @@ declare class express$Router extends express$Route {
   static (): express$Router;
   use(middleware: express$Middleware): this;
   use(...middleware: Array<express$Middleware>): this;
-  use(path: string|RegExp|string[], ...middleware: Array<express$Middleware>): this;
+  use(path: string | RegExp | string[], ...middleware: Array<express$Middleware>): this;
   use(path: string, router: express$Router): this;
   handle(req: http$IncomingMessage, res: http$ServerResponse, next: express$NextFunction): void;
 
