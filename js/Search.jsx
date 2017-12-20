@@ -8,7 +8,7 @@ class Search extends Component {
     searchTerm: ''
   };
   props: {
-    shows: Array<{ poster: string, title: string, year: string, description: string }>
+    shows: Array<{ poster: string, title: string, year: string, description: string, trailer: string, imdbID: string }>
   };
 
   handleSearchTermChange = (event: SyntheticKeyboardEvent & { target: HTMLInputElement }) => {
